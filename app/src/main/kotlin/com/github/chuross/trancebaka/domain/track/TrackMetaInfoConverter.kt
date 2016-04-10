@@ -1,7 +1,7 @@
 package com.github.chuross.trancebaka.domain.track
 
 import com.github.chuross.trancebaka.domain.user.UserConverter
-import com.github.chuross.trancebaka.infrastructure.soundcloud.resource.Track as Resource
+import com.github.chuross.trancebaka.infrastructure.soundcloud.resource.Track as TrackResource
 
 final class TrackMetaInfoConverter {
 
@@ -9,9 +9,9 @@ final class TrackMetaInfoConverter {
 
     companion object {
 
-        fun convertToModel(resource: Resource): TrackMetaInfo = TrackMetaInfo(
-                title = resource.title ?: "",
-                user = UserConverter.convertTomodel(resource.user),
+        fun convertToModel(resource: TrackResource): TrackMetaInfo = TrackMetaInfo(
+                title = resource.title ?: "no title",
+                user = resource.user?.let { UserConverter.convertTomodel(it) },
                 description = resource.description,
                 duration = resource.duration ?: 0,
                 streamable = resource.streamable ?: false,

@@ -8,7 +8,7 @@ import java.util.*
 data class Track(
         val id: String?,
         val title: String?,
-        val user: User,
+        val user: User?,
         val description: String?,
         val duration: Long?,
         val streamable: Boolean?,

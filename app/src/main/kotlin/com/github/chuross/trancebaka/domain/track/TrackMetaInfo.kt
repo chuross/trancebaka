@@ -7,13 +7,13 @@ data class TrackMetaInfo(
         val title: String,
         val user: User?,
         val description: String?,
-        val duration: Long = 0,
-        val streamable: Boolean = false,
+        val duration: Long,
+        val streamable: Boolean,
         val createdAt: Date?,
         val streamUrl: String?,
         val purchaseUrl: String?,
         val artworkUrl: String?,
         val waveformUrl: String?,
-        val playbackCount: Int = 0,
-        val favoritingsCount: Int = 0
+        val playbackCount: Int,
+        val favoritingsCount: Int
 )

@@ -1,6 +1,6 @@
 package com.github.chuross.trancebaka.domain.user
 
-import com.github.chuross.trancebaka.infrastructure.soundcloud.resource.User as Resource
+import com.github.chuross.trancebaka.infrastructure.soundcloud.resource.User as UserResource
 
 
 final class UserMetaInfoConverter {
@@ -9,8 +9,8 @@ final class UserMetaInfoConverter {
 
     companion object {
 
-        fun convertToModel(resource: Resource) = UserMetaInfo(
-                name = resource.name ?: "unknown",
+        fun convertToModel(resource: UserResource) = UserMetaInfo(
+                name = resource.name ?: "no name",
                 avatarUrl = resource.avatarUrl
         )
     }
