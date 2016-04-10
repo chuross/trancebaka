@@ -61,6 +61,13 @@ interface Api {
             @Query("tracks[][id]") trackIds: List<String>
     ): Observable<Playlist>
 
+    @PUT("playlists/{playlist_id}")
+    fun updatePlaylist(
+            @Header("Authorization") accessToken: String,
+            @Path("playlist_id") playlistId: String,
+            @Query("tracks[][id]") trackIds: List<String>
+    ): Observable<Playlist>
+
     @GET("users/{user_id}")
     fun user(
             @Query("client_id") clientId: String,
