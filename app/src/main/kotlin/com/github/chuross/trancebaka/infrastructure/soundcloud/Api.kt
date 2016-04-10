@@ -7,7 +7,7 @@ import com.github.chuross.trancebaka.infrastructure.soundcloud.resource.User
 import retrofit2.http.*
 import rx.Observable
 
-interface SoundCloudApi {
+interface Api {
 
     @GET("oauth2/token")
     fun token(
