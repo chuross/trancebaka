@@ -12,6 +12,7 @@ data class Playlist(
         val description: String?,
         val duration: Long?,
         val streamable: Boolean?,
+        val tracks: List<Track>?,
         @JsonProperty("created_at") val createdAt: Date?,
         @JsonProperty("artwork_url") val artworkUrl: String?
 )
