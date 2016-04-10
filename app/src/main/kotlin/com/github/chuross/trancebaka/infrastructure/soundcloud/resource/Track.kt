@@ -17,6 +17,6 @@ data class Track(
         @JsonProperty("purchase_url") val purchaseUrl: String?,
         @JsonProperty("artwork_url") val artworkUrl: String?,
         @JsonProperty("waveform_url") val waveformUrl: String?,
-        @JsonProperty("playback_count") val playbackCount: Int,
-        @JsonProperty("favoritings_count") val favoritingsCount: Int
+        @JsonProperty("playback_count") val playbackCount: Int?,
+        @JsonProperty("favoritings_count") val favoritingsCount: Int?
 )

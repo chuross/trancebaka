@@ -37,6 +37,7 @@ android {
 dependencies {
     // base
     compile "org.jetbrains.kotlin:kotlin-stdlib:$rootProject.ext.kotlinVersion"
+    compile 'org.apache.commons:commons-lang3:3.4'
 
     // support libs
     compile 'com.android.support:appcompat-v7:23.2.1'
