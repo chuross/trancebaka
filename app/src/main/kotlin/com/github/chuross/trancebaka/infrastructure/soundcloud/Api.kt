@@ -52,13 +52,13 @@ interface Api {
             @Query("offset") offset: Int = 0
     ): Observable<List<Playlist>>
 
-    @PUT("playlists")
-    fun playlists(
+    @POST("playlists")
+    fun createPlaylist(
             @Header("Authorization") accessToken: String,
             @Query("client_id") clientId: String,
-            @Query("playlist[title]") title: String,
-            @Query("playlist[sharing]") sharing: String = "private",
-            @Query("playlist[ids][][id]") trackIds: List<String>
+            @Query("title") title: String,
+            @Query("sharing") sharing: String = "private",
+            @Query("tracks[][id]") trackIds: List<String>
     ): Observable<Playlist>
 
     @GET("users/{user_id}")
