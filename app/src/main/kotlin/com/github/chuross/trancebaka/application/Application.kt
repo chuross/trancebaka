@@ -2,12 +2,14 @@ package com.github.chuross.trancebaka.application
 
 import android.app.Application
 import com.github.chuross.trancebaka.domain.playlist.PlaylistRepository
+import com.github.chuross.trancebaka.domain.user.User
 import com.github.chuross.trancebaka.infrastructure.soundcloud.RequestContext
 
 
 class Application : Application() {
 
-    val requestContext by lazy {
+    val authenticatedUser: User? get() = null // TODO
+    val requestContext: RequestContext by lazy {
         // TODO ベースURLをBuildConfig経由から取得
         RequestContext("", "")
     }

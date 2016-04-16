@@ -10,6 +10,7 @@ data class PlaylistMetaInfo(
         val description: String?,
         val duration: Int,
         val streamable: Boolean,
+        val sharing: String?,
         val tracks: List<Track>,
         val createdAt: Date?,
         val artworkUrl: String?

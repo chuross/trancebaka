@@ -18,8 +18,8 @@ interface Api {
 
     @GET("tracks/{track_id}")
     fun track(
-            @Path("track_id") trackId: String,
-            @Query("client_id") clientId: String
+            @Query("client_id") clientId: String,
+            @Path("track_id") trackId: String
     ): Observable<Track>
 
     @GET("tracks")
@@ -36,8 +36,8 @@ interface Api {
 
     @GET("playlists/{playlist_id}")
     fun playlist(
-            @Path("playlist_id") playlistId: String,
-            @Query("client_id") clientId: String
+            @Query("client_id") clientId: String,
+            @Path("playlist_id") playlistId: String
     ): Observable<Playlist>
 
     @GET("playlists")

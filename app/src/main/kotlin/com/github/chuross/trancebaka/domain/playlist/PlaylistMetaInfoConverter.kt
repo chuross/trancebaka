@@ -18,6 +18,7 @@ final class PlaylistMetaInfoConverter {
                     description = resource.description,
                     duration = resource.duration ?: 0,
                     streamable = resource.streamable ?: false,
+                    sharing = resource.sharing,
                     tracks = TrackConverter.convertToModels(resource.tracks),
                     createdAt = resource.createdAt,
                     artworkUrl = resource.artworkUrl
