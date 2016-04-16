@@ -10,7 +10,7 @@ import com.github.chuross.trancebaka.infrastructure.soundcloud.Api as SoundCloud
 
 
 @Module
-class ApplicationModule(application: Application) {
+class ApplicationModule(val application: Application) {
 
     private val retrofit: Retrofit
 
@@ -21,6 +21,10 @@ class ApplicationModule(application: Application) {
                 .addConverterFactory(JacksonConverterFactory.create())
                 .build()
     }
+
+    @Provides
+    @Singleton
+    fun providesApplication() = application
 
     @Provides
     @Singleton

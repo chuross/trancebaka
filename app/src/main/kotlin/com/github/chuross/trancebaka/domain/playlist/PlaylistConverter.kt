@@ -9,6 +9,8 @@ final class PlaylistConverter {
 
     companion object {
 
+        fun convertToModels(resources: List<PlaylistResource>): List<Playlist> = resources.map { convertToModel(it) }.filterNotNull()
+
         fun convertToModel(resource: PlaylistResource): Playlist? {
             if (StringUtils.isBlank(resource.id)) return null
             return Playlist(PlaylistIdentity(resource.id!!)).apply {
