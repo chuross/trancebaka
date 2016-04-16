@@ -38,12 +38,11 @@ class PlaylistRepository {
         val tracks = playlist.tracks.map { it.identity.value }
 
         return RxUtils.networkConnected(application)
-                .filter { application.authenticatedUser?.isAuthenticated }
                 .flatMap {
                     if (!playlist.isUnresolved) {
-                        return@flatMap api.updatePlaylist(application.authenticatedUser?.accessToken!!, playlist.identity.value, tracks)
+                        return@flatMap api.updatePlaylist(application.authenticatedUser?.accessToken ?: "", playlist.identity.value, tracks)
                     }
-                    api.createPlaylist(application.authenticatedUser?.accessToken!!, application.requestContext.clientId,
+                    api.createPlaylist(application.authenticatedUser?.accessToken ?: "", application.requestContext.clientId,
                             title = playlist.title ?: "no name",
                             sharing = playlist.sharing ?: "private",
                             trackIds = tracks)
