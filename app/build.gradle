@@ -57,6 +57,7 @@ dependencies {
 
     // support libs
     compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.android.support:design:23.2.1'
 
     // di
     compile 'com.google.dagger:dagger:2.2'
