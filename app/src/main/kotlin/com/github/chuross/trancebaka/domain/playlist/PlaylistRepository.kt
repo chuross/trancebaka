@@ -16,18 +16,18 @@ class PlaylistRepository {
     @Inject
     lateinit var api: Api
 
-    fun get(identity: PlaylistIdentity): Observable<Playlist> = RxUtils.networkConnected(application)
+    fun find(identity: PlaylistIdentity): Observable<Playlist> = RxUtils.networkConnected(application)
             .flatMap { api.playlist(application.requestContext.clientId, identity.value) }
             .map { PlaylistConverter.convertToModel(it) }
 
-    fun getList(query: String, filter: RequestFilter?, limit: Int?, offset: Int?): Observable<List<Playlist>> = RxUtils.networkConnected(application)
+    fun findAll(query: String, filter: RequestFilter?, limit: Int?, offset: Int?): Observable<List<Playlist>> = RxUtils.networkConnected(application)
             .flatMap {
                 api.playlists(application.requestContext.clientId,
                         query = query,
-                        tags = filter?.let { filter.tags },
-                        filter = filter?.let { filter.filter },
-                        createdAtFrom = filter?.let { filter.createdAtFrom },
-                        createdAtTo = filter?.let { filter.createdAtTo },
+                        tags = filter?.tags,
+                        sharing = filter?.sharing?.value,
+                        createdAtFrom = filter?.createdAtFrom,
+                        createdAtTo = filter?.createdAtTo,
                         limit = limit,
                         offset = offset
                 )

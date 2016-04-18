@@ -26,10 +26,10 @@ interface Api {
     fun tracks(
             @Query("client_id") clientId: String,
             @Query("q") query: String,
-            @Query("tags") tags: String? = "",
-            @Query("filter") filter: String? = "",
-            @Query("created_at[from]") createdAtFrom: String? = "1970/01/01 00:00:00",
-            @Query("created_at[to]") createdAtTo: String? = "9999/12/31 23:59:59",
+            @Query("tags") tags: String? = null,
+            @Query("filter") sharing: String? = null,
+            @Query("created_at[from]") createdAtFrom: String? = null,
+            @Query("created_at[to]") createdAtTo: String? = null,
             @Query("limit") limit: Int? = 10,
             @Query("offset") offset: Int? = 0
     ): Observable<List<Track>>
@@ -44,10 +44,10 @@ interface Api {
     fun playlists(
             @Query("client_id") clientId: String,
             @Query("q") query: String,
-            @Query("tags") tags: String? = "",
-            @Query("filter") filter: String? = "",
-            @Query("created_at[from]") createdAtFrom: String? = "1970/01/01 00:00:00",
-            @Query("created_at[to]") createdAtTo: String? = "9999/12/31 23:59:59",
+            @Query("tags") tags: String? = null,
+            @Query("filter") sharing: String? = null,
+            @Query("created_at[from]") createdAtFrom: String? = null,
+            @Query("created_at[to]") createdAtTo: String? = null,
             @Query("limit") limit: Int? = 10,
             @Query("offset") offset: Int? = 0
     ): Observable<List<Playlist>>
