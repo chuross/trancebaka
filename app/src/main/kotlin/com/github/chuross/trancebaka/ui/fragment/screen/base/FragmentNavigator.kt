@@ -1,9 +1,9 @@
-package com.github.chuross.trancebaka.ui.fragment.screen
+package com.github.chuross.trancebaka.ui.fragment.screen.base
 
 import android.support.v4.app.FragmentManager
 
 
-class FragmentNavigation(private val manager: FragmentManager, private val containerId: Int) {
+class FragmentNavigator(private val manager: FragmentManager, private val containerId: Int) {
 
     fun launchScreen(fragment: ScreenFragment) {
         when {

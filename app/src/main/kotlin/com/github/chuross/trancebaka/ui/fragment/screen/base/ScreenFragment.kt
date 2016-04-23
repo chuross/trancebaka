@@ -1,4 +1,4 @@
-package com.github.chuross.trancebaka.ui.fragment.screen
+package com.github.chuross.trancebaka.ui.fragment.screen.base
 
 import android.support.v4.app.Fragment
 

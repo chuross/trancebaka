@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'android-apt'
 
 buildscript {
     repositories {
@@ -67,6 +68,10 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.0.1'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.0.1'
     compile 'com.squareup.retrofit2:converter-jackson:2.0.1'
+
+    // view
+    compile 'com.hannesdorfmann.fragmentargs:annotation:3.0.2'
+    kapt 'com.hannesdorfmann.fragmentargs:processor:3.0.2'
 
     // tests
     testCompile 'junit:junit:4.12'
