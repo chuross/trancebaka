@@ -7,8 +7,10 @@ class FragmentNavigator(private val manager: FragmentManager, private val contai
 
     fun launchScreen(fragment: ScreenFragment) {
         when {
-            fragment.self.fragmentManager.findFragmentById(containerId) == null ->
+            manager.findFragmentById(containerId) == null -> {
+                if (!fragment.screen.isRoot) throw IllegalArgumentException("not root screen")
                 launchRootScreen(manager, fragment)
+            }
             else ->
                 launchChildScreen(manager, fragment)
         }
