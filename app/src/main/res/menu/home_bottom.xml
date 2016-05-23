@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:bbn_itemColorActive="@android:color/white"
+    app:bbn_itemColorInactive="#aaffffff">
 
     <item
         android:id="@+id/menu_item_home"
         android:color="@color/colorPrimary"
-        android:icon="@android:drawable/ic_dialog_dialer"
-        android:title="ホーム" />
+        android:icon="@mipmap/ic_home_white_24dp"
+        android:title="@string/menu_home" />
+
     <item
-        android:id="@+id/menu_item_"
+        android:id="@+id/menu_item_playlist"
         android:color="@android:color/holo_green_dark"
-        android:icon="@android:drawable/ic_dialog_info"
-        android:title="" />
+        android:icon="@mipmap/ic_queue_music_white_24dp"
+        android:title="@string/menu_playlist" />
+
     <item
-        android:id="@+id/bbn_item3"
+        android:id="@+id/bbn_item_category"
         android:color="@android:color/holo_orange_dark"
-        android:icon="@android:drawable/ic_dialog_map"
-        android:title="hoge" />
+        android:icon="@mipmap/ic_apps_white_24dp"
+        android:title="@string/menu_category" />
 
 </menu>

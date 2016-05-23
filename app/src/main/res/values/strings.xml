@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TranceBaka</string>
+    <!-- bottom menu -->
+    <string name="menu_home">ホーム</string>
+    <string name="menu_playlist">プレイリスト</string>
+    <string name="menu_category">カテゴリ</string>
 </resources>

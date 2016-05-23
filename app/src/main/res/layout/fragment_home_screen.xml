@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             app:bbn_entries="@menu/home_bottom"
-            app:bbn_scrollEnabled="true" />
+            app:bbn_scrollEnabled="false" />
 
     </android.support.design.widget.CoordinatorLayout>
 </layout>
