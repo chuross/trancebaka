@@ -57,8 +57,8 @@ dependencies {
     kapt 'com.android.databinding:compiler:2.0.0'
 
     // support libs
-    compile 'com.android.support:appcompat-v7:23.2.1'
-    compile 'com.android.support:design:23.2.1'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
 
     // di
     compile 'com.google.dagger:dagger:2.2'
@@ -72,6 +72,7 @@ dependencies {
     // view
     compile 'com.hannesdorfmann.fragmentargs:annotation:3.0.2'
     kapt 'com.hannesdorfmann.fragmentargs:processor:3.0.2'
+    compile 'it.sephiroth.android.library.bottomnavigation:bottom-navigation:1.0.6'
 
     // tests
     testCompile 'junit:junit:4.12'
