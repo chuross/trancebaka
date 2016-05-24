@@ -13,13 +13,13 @@
 
     <item
         android:id="@+id/menu_item_playlist"
-        android:color="@android:color/holo_green_dark"
+        android:color="@color/colorPlaylist"
         android:icon="@mipmap/ic_queue_music_white_24dp"
         android:title="@string/menu_playlist" />
 
     <item
         android:id="@+id/bbn_item_category"
-        android:color="@android:color/holo_orange_dark"
+        android:color="@color/colorCategory"
         android:icon="@mipmap/ic_apps_white_24dp"
         android:title="@string/menu_category" />
 
