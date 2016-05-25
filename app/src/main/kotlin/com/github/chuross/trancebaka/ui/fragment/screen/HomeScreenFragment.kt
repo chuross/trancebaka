@@ -2,16 +2,16 @@ package com.github.chuross.trancebaka.ui.fragment.screen
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import com.github.chuross.library.mvp.view.fragment.SupportPresentationFragment
 import com.github.chuross.trancebaka.R
 import com.github.chuross.trancebaka.application.ApplicationScreen
 import com.github.chuross.trancebaka.databinding.FragmentHomeScreenBinding
+import com.github.chuross.trancebaka.ui.fragment.screen.base.BasePresentationFragment
 import com.github.chuross.trancebaka.ui.fragment.screen.base.Screen
 import com.github.chuross.trancebaka.ui.fragment.screen.base.ScreenFragment
 import com.github.chuross.trancebaka.ui.fragment.screen.presenter.HomeScreenFragmentPresenter
 
 
-class HomeScreenFragment : SupportPresentationFragment<HomeScreenFragmentPresenter, FragmentHomeScreenBinding>(), ScreenFragment {
+class HomeScreenFragment : BasePresentationFragment<HomeScreenFragmentPresenter, FragmentHomeScreenBinding>(), ScreenFragment {
 
     override val self: Fragment = this
     override val screen: Screen = ApplicationScreen.HOME

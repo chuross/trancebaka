@@ -10,7 +10,7 @@
         android:layout_height="match_parent">
 
         <it.sephiroth.android.library.bottomnavigation.BottomNavigation
-            android:id="@+id/BottomNavigation"
+            android:id="@+id/bottomNavigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
