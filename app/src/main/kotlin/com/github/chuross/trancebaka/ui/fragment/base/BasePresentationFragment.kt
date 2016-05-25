@@ -1,4 +1,4 @@
-package com.github.chuross.trancebaka.ui.fragment.screen.base
+package com.github.chuross.trancebaka.ui.fragment.base
 
 import android.databinding.ViewDataBinding
 import com.github.chuross.library.mvp.presenter.SupportFragmentPresenter
