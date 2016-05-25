@@ -1,9 +1,11 @@
 package com.github.chuross.trancebaka.ui.fragment.screen
 
+import android.os.Bundle
 import android.support.v4.app.Fragment
 import com.github.chuross.trancebaka.R
 import com.github.chuross.trancebaka.application.ApplicationScreen
 import com.github.chuross.trancebaka.databinding.FragmentHomeScreenBinding
+import com.github.chuross.trancebaka.ui.extension.menuItemSelected
 import com.github.chuross.trancebaka.ui.fragment.base.BasePresentationFragment
 import com.github.chuross.trancebaka.ui.fragment.screen.base.Screen
 import com.github.chuross.trancebaka.ui.fragment.screen.base.ScreenFragment
@@ -21,4 +23,12 @@ class HomeScreenFragment : BasePresentationFragment<HomeScreenFragmentPresenter,
 
     override fun createPresenter(): HomeScreenFragmentPresenter = HomeScreenFragmentPresenter(this)
 
+    override fun onViewCreated(savedInstanceState: Bundle?) {
+        super.onViewCreated(savedInstanceState)
+
+        presenter.replaceContainer(R.id.menu_item_home)
+        subscriptions.add(binding.bottomNavigation.menuItemSelected().subscribe() {
+            presenter.replaceContainer(it)
+        })
+    }
 }

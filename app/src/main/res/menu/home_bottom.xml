@@ -18,7 +18,7 @@
         android:title="@string/menu_playlist" />
 
     <item
-        android:id="@+id/bbn_item_category"
+        android:id="@+id/menu_item_category"
         android:color="@color/colorCategory"
         android:icon="@mipmap/ic_apps_white_24dp"
         android:title="@string/menu_category" />

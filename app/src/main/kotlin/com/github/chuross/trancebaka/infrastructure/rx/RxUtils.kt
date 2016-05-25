@@ -6,18 +6,13 @@ import com.github.chuross.trancebaka.infrastructure.exception.NetworkDisconnecte
 import rx.Observable
 
 
-class RxUtils {
+object RxUtils {
 
-    private constructor()
-
-    companion object {
-
-        fun networkConnected(context: Context): Observable<Boolean> = Observable.create {
-            if (SystemUtils.checkNetworkConnected(context)) {
-                it.onNext(true)
-            } else {
-                it.onError(NetworkDisconnectedException())
-            }
+    fun networkConnected(context: Context): Observable<Boolean> = Observable.create {
+        if (SystemUtils.checkNetworkConnected(context)) {
+            it.onNext(true)
+        } else {
+            it.onError(NetworkDisconnectedException())
         }
     }
 }
