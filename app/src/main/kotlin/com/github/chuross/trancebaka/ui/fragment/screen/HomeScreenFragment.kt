@@ -5,11 +5,13 @@ import android.support.v4.app.Fragment
 import com.github.chuross.trancebaka.R
 import com.github.chuross.trancebaka.application.ApplicationScreen
 import com.github.chuross.trancebaka.databinding.FragmentHomeScreenBinding
+import com.github.chuross.trancebaka.infrastructure.extension.sync
 import com.github.chuross.trancebaka.ui.extension.menuItemSelected
 import com.github.chuross.trancebaka.ui.fragment.base.BasePresentationFragment
-import com.github.chuross.trancebaka.ui.fragment.screen.base.Screen
-import com.github.chuross.trancebaka.ui.fragment.screen.base.ScreenFragment
+import com.github.chuross.trancebaka.ui.fragment.base.Screen
+import com.github.chuross.trancebaka.ui.fragment.base.ScreenFragment
 import com.github.chuross.trancebaka.ui.fragment.screen.presenter.HomeScreenFragmentPresenter
+import com.trello.rxlifecycle.FragmentEvent
 
 
 class HomeScreenFragment : BasePresentationFragment<HomeScreenFragmentPresenter, FragmentHomeScreenBinding>(), ScreenFragment {
@@ -27,8 +29,12 @@ class HomeScreenFragment : BasePresentationFragment<HomeScreenFragmentPresenter,
         super.onViewCreated(savedInstanceState)
 
         presenter.replaceContainer(R.id.menu_item_home)
-        subscriptions.add(binding.bottomNavigation.menuItemSelected().subscribe() {
-            presenter.replaceContainer(it)
-        })
+        subscriptions.add(binding.bottomNavigation
+                .menuItemSelected()
+                .compose(bindUntilEvent<Int>(FragmentEvent.DESTROY_VIEW))
+                .sync()
+                .subscribe {
+                    presenter.replaceContainer(it)
+                })
     }
 }

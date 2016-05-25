@@ -1,6 +1,6 @@
 package com.github.chuross.trancebaka.application
 
-import com.github.chuross.trancebaka.ui.fragment.screen.base.Screen
+import com.github.chuross.trancebaka.ui.fragment.base.Screen
 
 
 enum class ApplicationScreen : Screen {
