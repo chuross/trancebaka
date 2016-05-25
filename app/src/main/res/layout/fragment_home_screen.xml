@@ -9,6 +9,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
         <it.sephiroth.android.library.bottomnavigation.BottomNavigation
             android:id="@+id/bottomNavigation"
             android:layout_width="match_parent"

@@ -5,5 +5,4 @@ import com.github.chuross.trancebaka.ui.fragment.screen.HomeScreenFragment
 
 
 class HomeScreenFragmentPresenter(fragment: HomeScreenFragment) : SupportFragmentPresenter<HomeScreenFragment>(fragment) {
-
 }

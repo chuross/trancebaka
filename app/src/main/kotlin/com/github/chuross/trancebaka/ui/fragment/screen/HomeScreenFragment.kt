@@ -1,6 +1,5 @@
 package com.github.chuross.trancebaka.ui.fragment.screen
 
-import android.os.Bundle
 import android.support.v4.app.Fragment
 import com.github.chuross.trancebaka.R
 import com.github.chuross.trancebaka.application.ApplicationScreen
@@ -22,7 +21,4 @@ class HomeScreenFragment : BasePresentationFragment<HomeScreenFragmentPresenter,
 
     override fun createPresenter(): HomeScreenFragmentPresenter = HomeScreenFragmentPresenter(this)
 
-    override fun onViewCreated(savedInstanceState: Bundle?) {
-        super.onViewCreated(savedInstanceState)
-    }
 }
