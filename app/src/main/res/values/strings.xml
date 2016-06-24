@@ -6,4 +6,8 @@
     <string name="menu_category">カテゴリ</string>
     <string name="menu_setting">設定</string>
     <string name="menu_about">このアプリについて</string>
+
+    <!-- home -->
+    <string name="home_quick_play">おまかせ再生</string>
+    <string name="home_quick_play_description">おまかせ再生</string>
 </resources>
