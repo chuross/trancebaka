@@ -7,9 +7,9 @@ import com.github.chuross.trancebaka.application.ApplicationScreen
 import com.github.chuross.trancebaka.databinding.FragmentHomeScreenBinding
 import com.github.chuross.trancebaka.infrastructure.extension.sync
 import com.github.chuross.trancebaka.ui.extension.menuItemSelected
-import com.github.chuross.trancebaka.ui.fragment.base.BasePresentationFragment
-import com.github.chuross.trancebaka.ui.fragment.base.Screen
-import com.github.chuross.trancebaka.ui.fragment.base.ScreenFragment
+import com.github.chuross.trancebaka.ui.fragment.common.BasePresentationFragment
+import com.github.chuross.trancebaka.ui.fragment.common.Screen
+import com.github.chuross.trancebaka.ui.fragment.common.ScreenFragment
 import com.github.chuross.trancebaka.ui.fragment.screen.presenter.HomeScreenFragmentPresenter
 import com.trello.rxlifecycle.FragmentEvent
 import rx.functions.Action1

@@ -1,4 +1,4 @@
-package com.github.chuross.trancebaka.ui.activity.base
+package com.github.chuross.trancebaka.ui.activity.common
 
 import android.databinding.ViewDataBinding
 import android.os.Bundle
