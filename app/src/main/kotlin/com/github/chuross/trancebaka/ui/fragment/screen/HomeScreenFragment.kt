@@ -12,6 +12,7 @@ import com.github.chuross.trancebaka.ui.fragment.base.Screen
 import com.github.chuross.trancebaka.ui.fragment.base.ScreenFragment
 import com.github.chuross.trancebaka.ui.fragment.screen.presenter.HomeScreenFragmentPresenter
 import com.trello.rxlifecycle.FragmentEvent
+import rx.functions.Action1
 
 
 class HomeScreenFragment : BasePresentationFragment<HomeScreenFragmentPresenter, FragmentHomeScreenBinding>(), ScreenFragment {
@@ -29,11 +30,11 @@ class HomeScreenFragment : BasePresentationFragment<HomeScreenFragmentPresenter,
         super.onViewCreated(savedInstanceState)
 
         presenter.replaceContainer(R.id.menu_item_home)
-        subscriptions.add(binding.bottomNavigation
+        binding.bottomNavigation
                 .menuItemSelected()
                 .compose(bindUntilEvent<Int>(FragmentEvent.DESTROY_VIEW))
                 .sync()
-                .subscribe {
+                .execute(Action1 {
                     presenter.replaceContainer(it)
                 })
     }

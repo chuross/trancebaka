@@ -11,6 +11,8 @@ import com.trello.rxlifecycle.FragmentLifecycleProvider
 import com.trello.rxlifecycle.LifecycleTransformer
 import com.trello.rxlifecycle.RxLifecycle
 import rx.Observable
+import rx.functions.Action0
+import rx.functions.Action1
 import rx.subjects.BehaviorSubject
 import rx.subscriptions.CompositeSubscription
 
@@ -20,6 +22,12 @@ abstract class BasePresentationFragment<PRESENTER : SupportFragmentPresenter<*>,
     val screenActivity: ScreenActivity get() = activity as ScreenActivity
     val subscriptions by lazy { CompositeSubscription() }
     private val lifecycleSubject: BehaviorSubject<FragmentEvent> = BehaviorSubject.create();
+
+
+    // extensions
+    fun <T> Observable<T>.execute(onNext: Action1<T>, onError: Action1<Throwable> = Action1 {}, onComplete: Action0 = Action0 {}) {
+        subscribe(onNext, onError, onComplete).apply { subscriptions.add(this) }
+    }
 
 
     override fun lifecycle(): Observable<FragmentEvent> = lifecycleSubject.asObservable();
