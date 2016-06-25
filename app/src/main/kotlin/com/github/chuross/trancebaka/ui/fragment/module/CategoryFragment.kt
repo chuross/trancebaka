@@ -4,7 +4,7 @@ import android.os.Bundle
 import com.github.chuross.trancebaka.R
 import com.github.chuross.trancebaka.databinding.FragmentModuleCategoryBinding
 import com.github.chuross.trancebaka.ui.fragment.common.BasePresentationFragment
-import com.github.chuross.trancebaka.ui.fragment.module.presenter.CategoryFragmentPresenter
+import com.github.chuross.trancebaka.ui.presenter.fragment.CategoryFragmentPresenter
 
 
 class CategoryFragment : BasePresentationFragment<CategoryFragmentPresenter, FragmentModuleCategoryBinding>() {

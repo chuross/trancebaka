@@ -1,4 +1,4 @@
-package com.github.chuross.trancebaka.ui.fragment.screen.presenter
+package com.github.chuross.trancebaka.ui.presenter.fragment
 
 import android.support.v4.app.Fragment
 import com.github.chuross.library.mvp.presenter.SupportFragmentPresenter

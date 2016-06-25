@@ -7,7 +7,7 @@ import com.github.chuross.recyclerviewadapters.ViewItem
 import com.github.chuross.trancebaka.R
 import com.github.chuross.trancebaka.databinding.FragmentModuleHomeBinding
 import com.github.chuross.trancebaka.ui.fragment.common.BasePresentationFragment
-import com.github.chuross.trancebaka.ui.fragment.module.presenter.HomeFragmentPresenter
+import com.github.chuross.trancebaka.ui.presenter.fragment.HomeFragmentPresenter
 import com.github.chuross.trancebaka.ui.list.ListSectionViewItem
 
 

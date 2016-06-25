@@ -10,7 +10,7 @@ import com.github.chuross.trancebaka.ui.extension.menuItemSelected
 import com.github.chuross.trancebaka.ui.fragment.common.BasePresentationFragment
 import com.github.chuross.trancebaka.ui.fragment.common.Screen
 import com.github.chuross.trancebaka.ui.fragment.common.ScreenFragment
-import com.github.chuross.trancebaka.ui.fragment.screen.presenter.HomeScreenFragmentPresenter
+import com.github.chuross.trancebaka.ui.presenter.fragment.HomeScreenFragmentPresenter
 import com.trello.rxlifecycle.FragmentEvent
 import rx.functions.Action1
 

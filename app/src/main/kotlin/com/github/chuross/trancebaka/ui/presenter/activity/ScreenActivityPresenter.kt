@@ -1,4 +1,4 @@
-package com.github.chuross.trancebaka.ui.activity.presenter
+package com.github.chuross.trancebaka.ui.presenter.activity
 
 import android.os.Bundle
 import android.support.v7.app.ActionBarDrawerToggle
