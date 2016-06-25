@@ -8,6 +8,7 @@
     <string name="menu_about">このアプリについて</string>
 
     <!-- home -->
-    <string name="home_quick_play">おまかせ再生</string>
-    <string name="home_quick_play_description">おまかせ再生</string>
+    <string name="home_home_quick_play">おまかせ再生</string>
+    <string name="home_home_quick_play_description">おまかせ再生</string>
+    <string name="home_home_section_recently_play_track">最近再生されたトラック</string>
 </resources>

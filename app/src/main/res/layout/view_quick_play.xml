@@ -19,12 +19,12 @@
             android:layout_height="wrap_content"
             android:textColor="@android:color/darker_gray"
             android:textSize="12sp"
-            android:text="@string/home_quick_play_description" />
+            android:text="@string/home_home_quick_play_description" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/home_quick_play"
+            android:text="@string/home_home_quick_play"
             android:textSize="20sp"
             android:textColor="@android:color/black" />
     </LinearLayout>
