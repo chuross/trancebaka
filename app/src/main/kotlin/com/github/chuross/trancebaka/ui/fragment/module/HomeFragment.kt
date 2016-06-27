@@ -7,8 +7,8 @@ import com.github.chuross.recyclerviewadapters.ViewItem
 import com.github.chuross.trancebaka.R
 import com.github.chuross.trancebaka.databinding.FragmentModuleHomeBinding
 import com.github.chuross.trancebaka.ui.fragment.common.BasePresentationFragment
-import com.github.chuross.trancebaka.ui.presenter.fragment.HomeFragmentPresenter
 import com.github.chuross.trancebaka.ui.list.ListSectionViewItem
+import com.github.chuross.trancebaka.ui.presenter.fragment.HomeFragmentPresenter
 
 
 class HomeFragment : BasePresentationFragment<HomeFragmentPresenter, FragmentModuleHomeBinding>() {
@@ -22,11 +22,10 @@ class HomeFragment : BasePresentationFragment<HomeFragmentPresenter, FragmentMod
 
         binding.toolbar.title = getString(R.string.app_name)
 
-        val compositeAdapter = CompositeRecyclerAdapter()
-        compositeAdapter.add(ViewItem(activity, R.layout.view_quick_play))
-        compositeAdapter.add(ListSectionViewItem(activity, getString(R.string.home_home_section_recently_play_track)))
-
         binding.list.layoutManager = LinearLayoutManager(activity)
-        binding.list.adapter = compositeAdapter
+        binding.list.adapter = CompositeRecyclerAdapter().apply {
+            add(ViewItem(activity, R.layout.view_quick_play))
+            add(ListSectionViewItem(activity, getString(R.string.home_home_section_recently_play_track)))
+        }
     }
 }
