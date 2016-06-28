@@ -22,7 +22,7 @@ class CategoryFragment : BasePresentationFragment<CategoryFragmentPresenter, Fra
         binding.toolbar.title = getString(R.string.menu_category)
         binding.list.layoutManager = LinearLayoutManager(activity)
         binding.list.adapter = TextItemAdapter(activity).apply {
-            addAll(Category.values().toList())
+            addAll(Category.values().map { it.displayName })
             setOnItemClickListener { viewHolder, position, item ->
                 // TODO
             }

@@ -3,6 +3,4 @@
     <color name="colorPrimary">#8e24aa</color>
     <color name="colorPrimaryDark">#6a1B9a</color>
     <color name="colorAccent">#ff4081</color>
-    <color name="colorPlaylist">#ff5722</color>
-    <color name="colorCategory">#03a9f4</color>
 </resources>
