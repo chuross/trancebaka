@@ -22,6 +22,7 @@ class CategoryFragment : BasePresentationFragment<CategoryFragmentPresenter, Fra
 
         binding.toolbar.title = getString(R.string.menu_category)
         binding.toolbar.navigationIcon = DrawerArrowDrawable(activity.applicationContext)
+        binding.toolbar.setNavigationOnClickListener { screenActivity.presenter.toggleDrawer() }
 
         binding.list.layoutManager = LinearLayoutManager(activity)
         binding.list.adapter = TextItemAdapter(activity).apply {

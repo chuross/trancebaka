@@ -1,11 +1,10 @@
 package com.github.chuross.trancebaka.ui.activity
 
-import android.support.v7.widget.Toolbar
 import com.github.chuross.trancebaka.R
 import com.github.chuross.trancebaka.databinding.ActivityScreenBinding
 import com.github.chuross.trancebaka.ui.activity.common.BasePresentationActivity
-import com.github.chuross.trancebaka.ui.presenter.activity.ScreenActivityPresenter
 import com.github.chuross.trancebaka.ui.fragment.common.FragmentNavigator
+import com.github.chuross.trancebaka.ui.presenter.activity.ScreenActivityPresenter
 
 
 class ScreenActivity : BasePresentationActivity<ScreenActivityPresenter, ActivityScreenBinding>() {
@@ -17,7 +16,7 @@ class ScreenActivity : BasePresentationActivity<ScreenActivityPresenter, Activit
 
     override fun createPresenter(): ScreenActivityPresenter = ScreenActivityPresenter(this)
 
-    fun bindToolbar(toolbar: Toolbar) {
-        presenter.bindToolbar(toolbar)
+    override fun onBackPressed() {
+        if (!presenter.backPress()) super.onBackPressed()
     }
 }

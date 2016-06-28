@@ -23,6 +23,7 @@ class HomeFragment : BasePresentationFragment<HomeFragmentPresenter, FragmentMod
 
         binding.toolbar.title = getString(R.string.app_name)
         binding.toolbar.navigationIcon = DrawerArrowDrawable(activity.applicationContext)
+        binding.toolbar.setNavigationOnClickListener { screenActivity.presenter.toggleDrawer() }
 
         binding.list.layoutManager = LinearLayoutManager(activity)
         binding.list.adapter = CompositeRecyclerAdapter().apply {
