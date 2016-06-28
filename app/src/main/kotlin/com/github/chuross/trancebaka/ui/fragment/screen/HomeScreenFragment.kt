@@ -2,12 +2,10 @@ package com.github.chuross.trancebaka.ui.fragment.screen
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import com.ashokvarma.bottomnavigation.BottomNavigationItem
 import com.github.chuross.trancebaka.R
 import com.github.chuross.trancebaka.application.ApplicationScreen
 import com.github.chuross.trancebaka.databinding.FragmentHomeScreenBinding
 import com.github.chuross.trancebaka.infrastructure.extension.sync
-import com.github.chuross.trancebaka.ui.HomeMenu
 import com.github.chuross.trancebaka.ui.extension.menuItemSelected
 import com.github.chuross.trancebaka.ui.fragment.common.BasePresentationFragment
 import com.github.chuross.trancebaka.ui.fragment.common.Screen
@@ -32,18 +30,16 @@ class HomeScreenFragment : BasePresentationFragment<HomeScreenFragmentPresenter,
     override fun onViewCreated(savedInstanceState: Bundle?) {
         super.onViewCreated(savedInstanceState)
 
-        presenter.replaceContainer(HomeMenu.HOME)
-        binding.bottomNavigation.apply {
-            addItem(BottomNavigationItem(HomeMenu.HOME.drawableResourceId, HomeMenu.HOME.titleResourceId))
-            addItem(BottomNavigationItem(HomeMenu.PLAYLIST.drawableResourceId, HomeMenu.PLAYLIST.titleResourceId))
-            addItem(BottomNavigationItem(HomeMenu.CATEGORY.drawableResourceId, HomeMenu.CATEGORY.titleResourceId))
-        }.initialise()
+        presenter.replaceContainer(HomeScreenFragmentPresenter.HomeMenu.HOME)
+
+        presenter.bottomNavigationItems.forEach { binding.bottomNavigation.addItem(it) }
+        binding.bottomNavigation.initialise()
         binding.bottomNavigation
                 .menuItemSelected()
                 .bindUntilEvent(this, FragmentEvent.DESTROY_VIEW)
                 .sync()
                 .execute(Action1 {
-                    presenter.replaceContainer(HomeMenu.values()[it])
+                    presenter.replaceContainer(HomeScreenFragmentPresenter.HomeMenu.values()[it])
                 })
     }
 }
