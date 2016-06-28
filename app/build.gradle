@@ -80,8 +80,8 @@ dependencies {
     // view
     compile 'com.hannesdorfmann.fragmentargs:annotation:3.0.2'
     kapt 'com.hannesdorfmann.fragmentargs:processor:3.0.2'
-    compile 'it.sephiroth.android.library.bottomnavigation:bottom-navigation:1.0.6'
     compile 'com.github.chuross:recyclerviewadapters:1.0.0'
+    compile 'com.ashokvarma.android:bottom-navigation-bar:1.2.2'
 
     // tests
     testCompile 'junit:junit:4.12'
