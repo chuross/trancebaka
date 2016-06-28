@@ -1,6 +1,7 @@
 package com.github.chuross.trancebaka.ui.fragment.module
 
 import android.os.Bundle
+import android.support.v7.graphics.drawable.DrawerArrowDrawable
 import android.support.v7.widget.LinearLayoutManager
 import com.github.chuross.trancebaka.R
 import com.github.chuross.trancebaka.application.Category
@@ -20,6 +21,8 @@ class CategoryFragment : BasePresentationFragment<CategoryFragmentPresenter, Fra
         super.onViewCreated(savedInstanceState)
 
         binding.toolbar.title = getString(R.string.menu_category)
+        binding.toolbar.navigationIcon = DrawerArrowDrawable(activity.applicationContext)
+
         binding.list.layoutManager = LinearLayoutManager(activity)
         binding.list.adapter = TextItemAdapter(activity).apply {
             addAll(Category.values().map { it.displayName })

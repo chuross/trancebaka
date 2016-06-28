@@ -1,6 +1,7 @@
 package com.github.chuross.trancebaka.ui.fragment.module
 
 import android.os.Bundle
+import android.support.v7.graphics.drawable.DrawerArrowDrawable
 import android.support.v7.widget.LinearLayoutManager
 import com.github.chuross.recyclerviewadapters.CompositeRecyclerAdapter
 import com.github.chuross.recyclerviewadapters.ViewItem
@@ -21,6 +22,7 @@ class HomeFragment : BasePresentationFragment<HomeFragmentPresenter, FragmentMod
         super.onViewCreated(savedInstanceState)
 
         binding.toolbar.title = getString(R.string.app_name)
+        binding.toolbar.navigationIcon = DrawerArrowDrawable(activity.applicationContext)
 
         binding.list.layoutManager = LinearLayoutManager(activity)
         binding.list.adapter = CompositeRecyclerAdapter().apply {
